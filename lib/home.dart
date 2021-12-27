@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'card1.dart';
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -12,7 +14,7 @@ class _HomeState extends State<Home> {
 
   static List<Widget> pages = [
     // TODO: Replace with Cards
-    Container(color: Colors.red,),
+    const Card1(),
     Container(color: Colors.green,),
     Container(color: Colors.blue,),
   ];
@@ -34,7 +36,6 @@ class _HomeState extends State<Home> {
       body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
-        // TODO: Set selected tab bar
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: <BottomNavigationBarItem>[
