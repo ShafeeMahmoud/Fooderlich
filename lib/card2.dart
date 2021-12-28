@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fooderlich/author_card.dart';
 
 class Card2 extends StatelessWidget {
   const Card2({Key? key}) : super(key: key);
@@ -22,9 +23,12 @@ class Card2 extends StatelessWidget {
         ),
         child: Column(
           children: [
-            // TODO: Add author information
+            const AuthorCard(
+              authorName: "Mike Katz",
+              title: "Smoothie Connoisseur",
+              imageProvider: AssetImage('assets/author_katz.jpeg'),
+            ),
             // TODO: Add positioned text
-
           ],
         ),
       ),
